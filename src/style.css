@@ -1,0 +1,9 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#container {
+   border: 1px solid black;
+   text-align: center; 
+   display: block;
+   background-color: rgb(224, 149, 224);
+}
