@@ -8,12 +8,12 @@ form {
     padding-top: 100px;
     padding-bottom: 20px;
 }
-#textForm {
+#text-form {
     font-size: 20px;
     border-radius: 10px;
     padding: 5px;
 }
-#searchForm {
+#search-form {
     font-size: 15px;
     border-radius: 10px;
     padding: 10px;
@@ -22,7 +22,7 @@ form {
     transition: all 150ms ease-in-out;
     cursor: pointer;
 }
-#searchForm:hover {
+#search-form:hover {
     color: white;
     background-color: rgb(2, 82, 129);
 }
@@ -56,8 +56,8 @@ h2 {
 small {
     font-size: 15px;
     position: relative;
-    right: 6px;
-    top: -5px;
+    right: -20px;
+    top: -50px;
 }
 ul {
     list-style: none;

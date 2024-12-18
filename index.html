@@ -9,32 +9,34 @@
 </head>
 <body>
     <form id="input-form">
-        <input type="text" placeholder="Enter a city..." id="textForm" required>
-        <input type="submit" value="Search" id="searchForm">
+        <input type="text" placeholder="Enter a city..." id="text-form" required>
+        <input type="submit" value="Search" id="search-form">
     </form>
    <div id="container">
     <header>
         Paris
     </header>
    <main>
-    <h1>☀️</h1> 
+    <h1 id="icon">☀️</h1> 
     <p> 
       <span class="day">Sunday</span> <span class="time">22:22</span>,
-      Mostly Clear
+      <span id="condition-description"> mostly clear</span> 
     </p>
     <h2>
         19
-        <small>℃</small>
     </h2>
+        <small>
+            ℃
+        </small>
       <ul>
         <li class="humidity">
          Humidity
-         <br />
+         <br id="humidity" />
          66%
         </li>
         <li class="wind">
           Wind
-          <br/>
+          <br id="wind"/>
            3.13 Km/h
         </li>
       </ul>
@@ -44,5 +46,5 @@
      </footer>
      </div> 
 </body>
-<script src="src/index.js"></script>
+<script src="src/script.js"></script>
 </html>
