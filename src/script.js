@@ -4,14 +4,15 @@ function changeWeather(response) {
     let humidityElement = document.querySelector("#humidity");
     let humidity = response.data.temperature.humidity;
     let windElement = document.querySelector("#wind");
-    let wind = response.data.wind;
+    let wind = response.data.wind.speed;
     let conditionElement = document.querySelector("#condition-description");
     let condition = response.data.condition.description;
     let iconElement = document.querySelector("#icon");
-    let icon = response.data.conition.icon;
-    let city= document.querySelector("header");
+    let icon = response.data.condition.icon;
+    let cityElement= document.querySelector("header");
+    
    
-    city.innerHTML= searchInput.value;
+    cityElement.innerHTML= response.data.city;
     temperatureElement.innerHTML= Math.round(temperature);
     humidityElement.innerHTML= humidity;
     windElement.innerHTML = wind;
@@ -30,5 +31,5 @@ function searchFormInput(event) {
     
     weatherUpdate(searchInput.value);
 }
-let searchFormElement = document.querySelector("#input-form");
+let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("click", searchFormInput);

@@ -61,6 +61,7 @@ small {
 }
 ul {
     list-style: none;
+    font-size: 20px;
 }
 li {
     display:inline-flex;
@@ -68,14 +69,17 @@ li {
 .humidity {
     border: 1px solid lightblue;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
+    padding-right: 45px;
     position: relative;
     right: 60px;
+    
 }
 .wind {
     border: 1px solid lightblue;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
+    padding-right: 45px;
 }
 footer {
     font-size: 14px;
