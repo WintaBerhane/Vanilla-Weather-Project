@@ -8,9 +8,12 @@ function changeWeather(response) {
     let conditionElement = document.querySelector("#condition-description");
     let condition = response.data.condition.description;
     let iconElement = document.querySelector("#icon");
-    let icon = response.data.condition.icon;
+    let icon = '<img src= "${response.data.condition.icon_url}" class="weather-icon">';
     let cityElement= document.querySelector("header");
+    let timeElement = document.querySelector ("#time");
+    let date = new Date(response.data.time*1000);
     
+
    
     cityElement.innerHTML= response.data.city;
     temperatureElement.innerHTML= Math.round(temperature);
@@ -18,7 +21,14 @@ function changeWeather(response) {
     windElement.innerHTML = wind;
     conditionElement.innerHTML = condition;
     iconElement.innerHTML = icon;
-
+    timeElement. innerHTML = formatDate(Date);
+}
+function formatDate(date) {
+     let minutes = date.getMinutes();
+     let hours = date.getHours();
+     let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    let day = days[date.getDay()];
+    return '${day} ${hours}:${minutes}';
 }
 function weatherUpdate(city){
     let apiKey = "6b05a8dfda109b43fffatb4do4059432";
